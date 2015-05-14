@@ -1,11 +1,11 @@
-Download
+- Download - 
 
 To use the Javabot you are going to need to download Blender (http://www.blender.org/download/) and Eclipse (https://www.eclipse.org/downloads/). 
 
 Version x.xx of Blender and x.xx of Eclipse were used for Development.
 
 
-Installation
+- Installation - 
 
 Once the software has been downloaded, first of all install Eclipse. 
 After its been successfully installed, go to File->Import and choose General->Archive selecting the path of the archive file of the Javabot. 
@@ -14,14 +14,16 @@ The Javabot should now be ready to run.
 Blender should be easy to install and will be ready to run the game simulations once installed.
 
 
-Configuration
+- Configuration - 
 
-Javabot / Blender Pathfinding
+Javabot / Blender Pathfinding:
 
 There are 2 main differences in the Javabot. This is whether you want Blender to compute pathfinding or whether you want the Javabot to compute the pathfinding. In the Javabot class you will see near the top a Boolean variable: localPathFinding. Setting it to true will tell the Javabot to perform the pathfinding, setting it to false will result in Blender doing the pathfinding instead. 
 There are 2 blender files, one for Blender computed pathfinding and the other for Javabot computed pathfinding. It is important to select the correct blend file and set the Boolean variable correctly. 
 
-Running a Distributed Set Up 
+
+Running a Distributed Set Up:
+ 
 The Javabot and Blender are both set up to allow them to be run distributed. Open them on separate computers that must be linked via a wireless/wired private local network. Some firewall settings may prevent Blender or Java from sending data packets and will require you to change their permissions. 
 You will need to change two areas of code. One area in the Javabot and the other in the Blender game. Go to the Javabot UDPServerV3 class and navigate to the constructor. 
 There are two lines of code: 
@@ -41,26 +43,34 @@ listen_address = ('localhost', 10001)
 
 Like you did with the Javabot, alter the IP addresses to the addresses used by your computer. Blender requires the IP address of the computer it is running on  (listen_address) and the address of the computer that the Javabot is running on (server_address) 
 
-Important: Consoles/Terminals
+
+Important: Consoles/Terminals:
+
 It is highly recommended that you run Blender connected to a console that allows it to print to.
 If you are using the windows operating system, select Window->Toggle System Console to bring up the system to see any prints or problems that have occurred as Blender will otherwise not inform you. 
 If you are using a Mac, you will need to instead run Blender from the Terminal. For example to run Blender from my Terminal I used the command: 
 /Applications/blender.app/Contents/MacOS/blender
  This will open Blender and allow it to print commands to the Terminal window you opened it from. 
-Altering the number of Dinosaurs 
+
+Altering the number of Dinosaurs:
+ 
 The default number of Dinosaurs in the system is 20. 
  - Also note that the Javabot controls the number of Dinosaurs in the system not Blender. 
 To change these numbers go to the Dinosaur Controller class in the Javabot. In the initialise method you will see the For loops which specify the numbers of dinosaurs created. Commented out are other species of Dinosaurs that can also be added to the system. Note that most of these are experimental, but the T-Rex and Parasaur Dinosaurs work well. I would advise changing the numbers of Dinosaurs to around 100 to see the impact it has on the two systems. 
 Should you also wish to do, you may move the environment objects around as their positions are sent at initialisation and are therefore not predefined. 
 
-Adding More Dinosaur Species to the System
+
+Adding More Dinosaur Species to the System:
+
 The Javabot default configuration will spawn two types of Dinosaur: Parasaurs and T-Rexs. 
 
 You may however wish to add more Dinosaurs to the System. You must make changes in Blender and the Javabot.
 
+
 Javabot
 
 The Dinosaur must inherit from either the Carnivore or Herbivore class. Look at the existing Parasaur/T-rex class to get an idea of what must contained in your new class. (Most can be copied)
+
 
 Blender
 
@@ -76,7 +86,8 @@ I would highly recommend you use Java to compute the pathfinding as it is much m
 
 You must copy the logic bricks and properties of a Parasaur or T-rex (Depending on whether you are adding a herbivor or carnivore) to your new Dinosaur. Otherwise your Dinosaur will not work as properties are modified and used by Java.
 
-Execution
+
+- Execution - 
 
 
 To run the Javabot you must START BLENDER FIRST.
@@ -85,8 +96,8 @@ To do this, make sure you are in the 3D view and looking through the camera (Sho
 
 Wait a couple of seconds. You should see:
 
-Blender Game Engine Started
-starting up on localhost port 10001
+	Blender Game Engine Started
+	starting up on localhost port 10001
 
 (Or something similar)
 
@@ -102,6 +113,7 @@ Javabot
 The Javabot will initialise with a window. This window is a 2D top view tiled map of the Blender game map. The positions and paths of the Dinosaurs will be displayed and updated.
 
 You can navigate around the map with the arrow keys. 
+
 
 Blender
 
