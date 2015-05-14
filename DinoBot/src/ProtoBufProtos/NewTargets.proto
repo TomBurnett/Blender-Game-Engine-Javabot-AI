@@ -1,0 +1,13 @@
+
+option java_outer_classname = "NewTargetsProtos";
+
+message NewTarget {
+  required string uniqueObjectName = 1;        // Unique ID number for this person.
+  required int32 state = 2;
+  required string target = 3;
+}
+
+// Create commands just one of these.
+message NewTargets {
+  repeated NewTarget newTarget = 1;
+}

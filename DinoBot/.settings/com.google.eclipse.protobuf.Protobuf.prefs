@@ -1,0 +1,9 @@
+compiler.descriptorFilePath=/Users/thomasburnett/Documents/University/Fourth Year/Dissertation/Dinosaurs/protobuf-2.6.1/src/google/protobuf/descriptor.proto
+compiler.enableProjectSettings=true
+compiler.javaCodeGenerationEnabled=true
+compiler.javaOutputDirectory=ProtoBufProtos
+compiler.protocFilePath=/usr/local/bin/protoc
+compiler.useProtocInCustomPath=true
+compiler.useProtocInSystemPath=false
+eclipse.preferences.version=1
+general.enableProjectSettings=true

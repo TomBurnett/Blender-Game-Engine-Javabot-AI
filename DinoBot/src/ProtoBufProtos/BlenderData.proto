@@ -1,0 +1,32 @@
+
+
+option java_outer_classname = "BlenderDataProtos";
+
+message Command {
+  required string commandType = 1;
+  optional string object = 2;
+  optional string uniqueObjectName = 3;        // Unique ID number for this person.
+  optional float posX = 4;
+  optional float posY = 5;
+  optional float velX = 6;
+  optional float velY = 7;
+  optional float state = 8;
+  optional string target = 9;
+  optional float scaleX = 10;
+  optional float scaleY = 11;
+  optional int32 dinoType = 12;
+  optional float targetX = 13;
+  optional float targetY = 14;
+}
+
+message Header {
+  required int32 sequenceNum = 1;
+  required int32 ack = 2;
+  required int32 bitField = 3;
+}
+
+// Create commands just one of these.
+message BlenderData {
+  repeated Command command = 1;
+  optional Header header = 2;
+}

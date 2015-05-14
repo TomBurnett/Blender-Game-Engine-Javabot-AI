@@ -1,0 +1,25 @@
+
+
+option java_outer_classname = "EnvironmentProtos";
+
+message Water {
+  required string uniqueObjectName = 1;        // Unique ID number for this person.
+  required float posX = 2;
+  required float posY = 3;
+  required float scaleX = 4;
+  required float scaleY = 5;
+}
+
+message Vegetation {
+  required string uniqueObjectName = 1;        // Unique ID number for this person.
+  required float posX = 2;
+  required float posY = 3;
+  required float scaleX = 4;
+  required float scaleY = 5;
+}
+
+// Create commands just one of these.
+message EnvironmentObjects {
+  repeated Water water = 1;
+  repeated Vegetation veg = 2;
+}
