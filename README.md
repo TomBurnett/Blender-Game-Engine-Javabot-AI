@@ -22,7 +22,7 @@ There are 2 main differences in the Javabot. This is whether you want Blender to
 There are 2 blender files, one for Blender computed pathfinding and the other for Javabot computed pathfinding. It is important to select the correct blend file and set the Boolean variable correctly. 
 
 
-**Running a Distributed Set Up:**
+## Running a Distributed Set Up:
  
 The Javabot and Blender are both set up to allow them to be run distributed. Open them on separate computers that must be linked via a wireless/wired private local network. Some firewall settings may prevent Blender or Java from sending data packets and will require you to change their permissions. 
 You will need to change two areas of code. One area in the Javabot and the other in the Blender game. Go to the Javabot UDPServerV3 class and navigate to the constructor. 
@@ -44,7 +44,7 @@ You need to perform similar changes in the Blender game. Go to GameLogic and edi
 Like you did with the Javabot, alter the IP addresses to the addresses used by your computer. Blender requires the IP address of the computer it is running on  (listen_address) and the address of the computer that the Javabot is running on (server_address) 
 
 
-**Important: Consoles/Terminals:**
+## Important: Consoles/Terminals:
 
 It is highly recommended that you run Blender connected to a console that allows it to print to.
 If you are using the windows operating system, select Window->Toggle System Console to bring up the system to see any prints or problems that have occurred as Blender will otherwise not inform you. 
@@ -52,7 +52,7 @@ If you are using a Mac, you will need to instead run Blender from the Terminal. 
 /Applications/blender.app/Contents/MacOS/blender
  This will open Blender and allow it to print commands to the Terminal window you opened it from. 
 
-**Altering the number of Dinosaurs:**
+## Altering the number of Dinosaurs:
  
 The default number of Dinosaurs in the system is 20. 
  - Also note that the Javabot controls the number of Dinosaurs in the system not Blender. 
@@ -60,7 +60,7 @@ To change these numbers go to the Dinosaur Controller class in the Javabot. In t
 Should you also wish to do, you may move the environment objects around as their positions are sent at initialisation and are therefore not predefined. 
 
 
-**Adding More Dinosaur Species to the System:**
+## Adding More Dinosaur Species to the System:
 
 The Javabot default configuration will spawn two types of Dinosaur: Parasaurs and T-Rexs. 
 
@@ -115,7 +115,7 @@ The Javabot will initialise with a window. This window is a 2D top view tiled ma
 You can navigate around the map with the arrow keys. 
 
 
-**Blender**s
+**Blender**
 
 You will begin with the camera focussed on a white sphere (doesn’t interact with the Dinosaurs). 
 
