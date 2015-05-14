@@ -2,7 +2,7 @@
 
 To use the Javabot you are going to need to download Blender (http://www.blender.org/download/) and Eclipse (https://www.eclipse.org/downloads/). 
 
-Version x.xx of Blender and x.xx of Eclipse were used for Development.
+Version 2.72b of Blender and 4.4.1 of Eclipse were used for Development.
 
 
 # Installation 
