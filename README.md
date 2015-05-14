@@ -16,7 +16,7 @@ Blender should be easy to install and will be ready to run the game simulations 
 
 # Configuration 
 
-**Javabot / Blender Pathfinding**
+## Javabot / Blender Pathfinding
 
 There are 2 main differences in the Javabot. This is whether you want Blender to compute pathfinding or whether you want the Javabot to compute the pathfinding. In the Javabot class you will see near the top a Boolean variable: localPathFinding. Setting it to true will tell the Javabot to perform the pathfinding, setting it to false will result in Blender doing the pathfinding instead. 
 There are 2 blender files, one for Blender computed pathfinding and the other for Javabot computed pathfinding. It is important to select the correct blend file and set the Boolean variable correctly. 
@@ -28,18 +28,18 @@ The Javabot and Blender are both set up to allow them to be run distributed. Ope
 You will need to change two areas of code. One area in the Javabot and the other in the Blender game. Go to the Javabot UDPServerV3 class and navigate to the constructor. 
 There are two lines of code: 
 
-IPAddress = InetAddress.getByName("192.168.0.4"); 
-//IPAddress = InetAddress.getByName("localhost"); 
+	IPAddress = InetAddress.getByName("192.168.0.4"); 
+	//IPAddress = InetAddress.getByName("localhost"); 
 
 The top line allows you to specify the IP address of the computer that is running Blender. You should be able to find the IP address under your network settings. 
 Either use an IP address for a distributed setup or the localhost line for a setup where Blender and Java run on the same machine. 
 You need to perform similar changes in the Blender game. Go to GameLogic and edit the UDPControllerV10.py script. The lines you are looking for are near the top: 
 
-server_address = ('localhost', 10000) 
-listen_address = ('localhost', 10001) 
+	server_address = ('localhost', 10000) 
+	listen_address = ('localhost', 10001) 
 
-server_address = ('137.195.24.216', 10000) 
-listen_address = ('137.195.120.86', 10001) 
+	server_address = ('137.195.24.216', 10000) 
+	listen_address = ('137.195.120.86', 10001) 
 
 Like you did with the Javabot, alter the IP addresses to the addresses used by your computer. Blender requires the IP address of the computer it is running on  (listen_address) and the address of the computer that the Javabot is running on (server_address) 
 
